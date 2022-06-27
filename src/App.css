@@ -16,6 +16,11 @@ body {
   padding-top: 30px;
 }
 
+.container {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
 .todo-item {
   display: flex;
   justify-content: space-between;
@@ -27,24 +32,38 @@ body {
   min-width: 300px;
   box-shadow: 5px 5px 10px 1px gray;
 }
-.title{
+
+.title {
   font-size: 1.3rem;
+  padding-right: 20px;
 }
+
+.title span {
+  font-size: 1rem;
+}
+
 button {
   background: none;
   border: none;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
-.edit{
+
+button:hover {
+  transform: scale(0.98);
+}
+
+.edit {
   font-size: 1.3rem;
   color: green;
 }
-.delete{
+
+.done {
   font-size: 1.3rem;
   color: red;
 }
 
-.add-task{
+.add-task {
   margin: 10px;
   padding: 10px 20px;
   background-color: green;
