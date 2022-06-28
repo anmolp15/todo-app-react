@@ -1,9 +1,20 @@
 import React from "react";
-
+import Axios from "axios";
 import { Link } from "react-router-dom";
+
+const URL = "https://jsonplaceholder.typicode.com/todos";
 
 export default function Read(props) {
   const data = props.data;
+
+  function handleDelete(id) {
+    Axios.delete(`${URL}/${id}`)
+      .then(() => {
+        window.alert("Task Deleted");
+      })
+      .catch((err) => console.log(err));
+  }
+
   return (
     <div>
       <div className="container">
@@ -28,10 +39,11 @@ export default function Read(props) {
                       ></i>
                     </Link>
                   </button>
-                  <button className="done">
-                    <Link to={`/delete/${item.id}`}>
-                      <i className="fa fa-check" aria-hidden="true"></i>
-                    </Link>
+                  <button
+                    className="done"
+                    onClick={() => handleDelete(item.id)}
+                  >
+                    <i className="fa fa-check" aria-hidden="true"></i>
                   </button>
                 </div>
               </div>
