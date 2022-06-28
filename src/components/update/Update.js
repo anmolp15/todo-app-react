@@ -24,7 +24,7 @@ export default function Update(props) {
     };
     Axios.put(`${URL}/${id}`, updatedTask)
       .then(() => {
-        window.alert('Task Updated Successfully!')
+        window.alert("Task Updated Successfully!");
       })
       .catch((err) => console.log(err));
   }
