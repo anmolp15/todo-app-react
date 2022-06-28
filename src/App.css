@@ -12,14 +12,43 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
-  padding-top: 30px;
 }
 
 .container {
   max-height: 600px;
   overflow-y: scroll;
 }
+
+/* NavBAr component */
+.nav {
+  background-color: chocolate;
+  width: 100vw;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: white;
+  font-weight: 900;
+  position: relative;
+  text-align: center;
+}
+
+#home-btn {
+  position: absolute;
+  top: 30%;
+  right: 50px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+#home-btn a {
+  color: white;
+}
+
+
+
+/* Read component */
 
 .todo-item {
   display: flex;
@@ -38,10 +67,12 @@ body {
 .title {
   font-size: 1.3rem;
   padding-right: 20px;
+  display: flex;
 }
 
-.title span {
+.s-no {
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 button {
@@ -69,6 +100,25 @@ button:hover {
   margin: 10px;
   padding: 10px 20px;
   background-color: green;
-  color: white;
   border-radius: 10px;
+  color: white;
+}
+
+.add-task a {
+  color: white;
+}
+
+
+/* create component */
+
+#task-title {
+  width: 30vw;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+#task-title:focus {
+  outline: none;
 }
