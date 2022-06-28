@@ -1,16 +1,9 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import Axios from "axios";
+
 import { Link } from "react-router-dom";
-const URL = "https://jsonplaceholder.typicode.com/todos";
 
-export default function Read() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    Axios.get(URL).then((res) => setData(res.data));
-  }, []);
-
+export default function Read(props) {
+  const data = props.data;
   return (
     <div>
       <div className="container">
